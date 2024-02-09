@@ -9,14 +9,14 @@ bool is_matix_triangular_upper(int matrix[N][N]);
 bool is_matix_triangular_lower(int matrix[N][N]);
 
 int main() {
-	int matrix[N][N];
+	int matrix[N][N] = { {1, 1, 1, 1}, {0, 1, 1, 1}, {0, 0, 1, 1}, {0, 0, 0, 1} };
 
-	random_matrix_init(matrix, 0, 1);
+	//random_matrix_init(matrix, 0, 1);
 
 	cout << "Matrix:\n" << convert_matrix_to_string(matrix);
 
 	cout << (is_matix_triangular_upper(matrix) == 0 ? "No" : "Yes") << endl;
-	cout << (is_matix_triangular_upper(matrix) == 0 ? "No" : "Yes");
+	cout << (is_matix_triangular_lower(matrix) == 0 ? "No" : "Yes");
 
 	return 0;
 }
